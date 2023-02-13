@@ -1,0 +1,130 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --text:1.4rem;
+    --head:calc(1rem + 5vw); 
+    --bg-color:#c0392b;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.lead-section {
+    min-height:200vh;
+    background: linear-gradient(pink 2%, transparent),
+    url("./assets/img/sakura.jpg");
+    background-repeat:no-repeat;  
+    position: relative;
+    z-index: 4; 
+    background-size:cover; 
+    background-position:center;
+    /* background: linear-gradient(#000, transperent) */
+    /* animation:slide 1s ease-in-out; */
+}
+.navbar {
+
+    display:flex;
+    justify-content:space-between;
+    height: 10vh;
+    padding:0rem 1.5rem;
+    align-items: center;
+    transform:translateY(-100%);
+    animation: movedown 650ms ease-in 1s forwards;
+    
+}
+@keyframes movedown{
+    from{
+        transform:translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);    
+    }
+}
+.navbar ul{
+    list-style: none;
+}
+.navbar ul li{
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+.navbar ul li a{
+
+   text-decoration: none; 
+   color: #000
+
+}
+
+/* unvisited link */
+a:link {
+    color: green;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: blue;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  } 
+
+
+.text-lead  {
+   height: 80vh;
+   display:flex;
+   flex-direction:column;
+   justify-content: center;
+   align-items: center;
+animation: slide 1s ease-in-out; 
+
+}
+@keyframes slide{
+    from{
+
+     transform:translateX(-100%) ;
+    }
+    to{
+    transform:translateX(0%);
+    }
+}
+.text-lead:before{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(112, 161, 216);
+    /* background-repeat: no-repeat; */
+    z-index:1;
+    top:0;
+    opacity: 0.1;
+ 
+}
+
+.text-lead h2{ 
+     font-size: var(--head); 
+
+ } 
+ .text-lead p {
+    font-size:2rem;
+ }
+ .text-lead a {
+    font-size:1.5rem;
+    background:var(--bg-color);
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+    margin: 0.5rem auto;
+    display: block;
+
+ }
+ .text-lead a:hover{
+    opacity: 0.5;
+ }
